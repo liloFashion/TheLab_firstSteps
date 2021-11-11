@@ -1,16 +1,6 @@
 # Mainlayout, which will be used first
 WidgetsExamples:
 
-<ImagesExamples@GridLayout>
-    cols: 3
-    Image:
-        source: "images/bg1.jpg"
-    Image:
-        source: "images/bg1.jpg"
-        allow_stretch: True
-    Image:
-        source: "images/bg1.jpg"
-
 <WidgetsExamples>
     cols: 3
     ToggleButton:
@@ -25,8 +15,9 @@ WidgetsExamples:
         disabled: not root.count_enabled
     Label:
         text: root.my_text
-        # include in buildozer.spec: source.include_patterns = Fonts/*.ttf
-        font_name: "Fonts/Lcd.ttf"
+        # font_name: f"{environ[rooth_path]}/Fonts/Lcd.ttf"
+        # font_name: root.font_lcd
+        # font_name: "Lcd.ttf"
         font_size: "100dp"
         color: 1, .5, 1, 1
     Switch:
@@ -43,22 +34,9 @@ WidgetsExamples:
         # on_value: root.on_slider_value(self)
         orientation: "vertical"
         disabled: not my_switch.active
-    BoxLayout:
-        orientation: "vertical"
-        Label:
-            text: str(int(my_slider.value))
-            # text: root.slider_value_txt
-            font_size: "75dp"
-            color: 1, 1, .5, 1
-        ProgressBar:
-            max: 100
-            value: int(my_slider.value)
-    TextInput:
-        id: my_text_input
-        size_hint: None, 1
-        width: "100dp"
-        text: root.text_input_str
-        multiline: False
-        on_text_validate: root.on_text_validate(self)
+
     Label:
-        text: "Your name is: " + root.text_input_str
+        text: str(int(my_slider.value))
+        # text: root.slider_value_txt
+        font_size: "100dp"
+        color: 1, 1, .5, 1
