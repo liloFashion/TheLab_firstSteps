@@ -1,4 +1,3 @@
-# from io import StringIO
 import os
 import sys
 from pathlib import Path
@@ -13,18 +12,15 @@ root_path: Path = os.path.split((os.path.dirname(__file__)))[0]
 sys.path.append(root_path)
 # for import of Fonts dir
 font_path: Path = os.path.join(root_path, f'Main/Fonts{os.sep}')
-image_path: Path = os.path.join(root_path, f'Main/images{os.sep}')
 
 
 class WidgetsExamples(GridLayout):
     count = 0
     count_enabled = BooleanProperty(False)
     my_text = StringProperty("0")
-    text_input_str = StringProperty("foo")
     # slider_value_txt = StringProperty("0")
     font_lcd: Path = os.path.join(font_path, "Lcd.ttf")
-    image_bg1: Path = os.path.join(image_path, "bg1.jpg")
-    print(image_bg1)
+    print(font_lcd)
 
     def on_button_click(self):
         # print("Button clicked")
@@ -43,9 +39,6 @@ class WidgetsExamples(GridLayout):
 
     def on_switch_active(self, widget):
         print("Switch: " + str(widget.active))
-
-    def on_text_validate(self, widget):
-        self.text_input_str = widget.text
 
 
 class TheLabApp(App):
