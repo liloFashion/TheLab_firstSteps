@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = The Lab - First Steps
+title = The Lab - TextInput
 
 # (str) Package name
-package.name = thelab_firststeps
+package.name = thelab_textinput
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.loerinci
@@ -22,7 +22,7 @@ source.include_patterns = assets/*,images/*.png,images/*.jpg,Fonts/*.ttf
 #source.exclude_exts = spec
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-source.exclude_dirs = tests, bin, venv, TheLab, Source
+source.exclude_dirs = tests, bin, venv, TheLab_01_FirstSteps, Source
 
 # (list) List of exclusions using pattern matching
 #source.exclude_patterns = license,images/*/*.jpg
