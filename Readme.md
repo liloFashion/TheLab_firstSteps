@@ -7,6 +7,7 @@ This directory is the one, where your main and the kivy for this main is living.
 For every new APK you will change title and package.name in buildozer.spec.
 Please have a look for the include_patterns and exclude_dirs for your APK!
 
+###### Different steps
 
 **TheLab_01_FirstSteps** shows you different Layouts and Buttons.
 It uses the PageLayout and shows, how the Buttons are overlayed at the last screen.
@@ -18,3 +19,8 @@ for usage. There is also a slider, which can be activated with an On/OFF switch.
 
 ![img_2.png](img_2.png)
 
+**TheLab_03_TextInput** shows Version TheLab_02_CounterSlider with a ProgressBar
+and a one line TextInput.
+![img_4.png](img_4.png)
+
+![img_3.png](img_3.png)
